@@ -1,139 +1,86 @@
-#
-#  Be sure to run `pod spec lint HHLBOCLibrary.podspec' to ensure this is a
-#  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
 
-Pod::Spec.new do |spec|
 
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
+Pod::Spec.new do |s|
 
-  spec.name         = "HHLBOCLibrary"
-  spec.version      = "0.0.4"
-  spec.summary      = "LBOC library for test"
+  #pod的名称
+  s.name         = "HHLBOCLibrary"
+  #pod的版本
+  s.version      = "0.0.5"
+  #pod简介(最多140字符)
+  s.summary      = "HHLBOCLibrary."
+  #pod详细描述
+  s.description  = <<-DESC
 
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-  LBOC library for test
-  LBOC library for test
+                    this is HHLBOCLibrary develop by HanHan
+
                    DESC
+  #项目主页地址
+  s.homepage     = "https://github.com/LeAustinHan/HHLBOCLibrary"
 
-  spec.homepage     = "https://github.com/LeAustinHan/HHLBOCLibrary"
-  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
-
-  # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #spec.screenshots = [ 'http://dl.dropbox.com/u/378729/MBProgressHUD/1.png', 'http://dl.dropbox.com/u/378729/MBProgressHUD/2.png' ]
   #
-  #  Licensing your code is important. See https://choosealicense.com for more info.
-  #  CocoaPods will detect a license file if there is a named LICENSE*
-  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
+  #spec.documentation_url = 'http://www.example.com/docs.html'
+  #许可证
+  s.license      = { :type => "MIT", :file => "LICENSE" }
+  #作者
+  s.author             = { "HanHan" => "314456527@qq.com" }
+  # Or just: s.author    = "HanHan"
+  # s.authors            = { "HanHan" => "314456527@qq.com" }
+  #社交网址 微薄或者博客
+  # s.social_media_url   = "314456527@qq.com"
 
-  #spec.license      = "MIT (example)"
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  #库支持的最低系统版本
+  s.platform     = :ios, "8.0"
 
+  #需要系统版本支持平台的最小部署目标。与平台属性不同的是，部署目标属性允许指定多个平台支持该pod，为每个平台指定不同的部署目标。
+  # s.ios.deployment_target = "5.0"
+  # s.osx.deployment_target = "10.7"
+  # s.watchos.deployment_target = "2.0"
+  # s.tvos.deployment_target = "9.0"
 
-  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the authors of the library, with email addresses. Email addresses
-  #  of the authors are extracted from the SCM log. E.g. $ git log. CocoaPods also
-  #  accepts just a name if you'd rather not provide an email address.
-  #
-  #  Specify a social_media_url where others can refer to, for example a twitter
-  #  profile URL.
-  #
+  #库索引地址
+  s.source       = { :git => "https://github.com/LeAustinHan/HHLBOCLibrary.git", :tag => s.version.to_s }
 
-  spec.author             = { "LeAustinHan" => "314456527@@qq.com" }
-  # Or just: spec.author    = "LeAustinHan"
-  # spec.authors            = { "LeAustinHan" => "314456527@@qq.com" }
-  # spec.social_media_url   = "https://twitter.com/LeAustinHan"
+  #需要包含的源文件
+  s.source_files  = ["HHLBOCLibrary/*.{h,m}","HHLBOCLibrary/**/*.{h,m}"]
+  #需要移除的文件
+  # s.exclude_files = "Classes/Exclude"
+  #公开的头文件。如果没有指定公共头文件，那么source文件中的所有头文件都被认为是公开的。
+  # s.public_header_files = "Classes/**/*.h"
+  #私有头文件
+  #s.private_header_files = 'Headers/Private/*.h'
 
-  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If this Pod runs only on iOS or OS X, then specify the platform and
-  #  the deployment target. You can optionally include the target after the platform.
-  #
+  #资源文件
+    #s.resource = "XESTeacher.xcassets"
 
-  spec.platform     = :ios
-  spec.platform     = :ios, "8.0"
+#s.resources = ["HHLBOCLibrary/Resources/*.plist","CloudLearning_MyInfo/Resources/*.xcassets"]
 
-  #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
-  # spec.osx.deployment_target = "10.7"
-  # spec.watchos.deployment_target = "2.0"
-  # spec.tvos.deployment_target = "9.0"
+  # s.resources = "HHLBOCLibrary/Resources/*.plist"
 
+  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
+  #需要系统framwork3
+  # s.ios.framework  = "SomeFramework"
+  # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  spec.source       = { :git => "https://github.com/LeAustinHan/HHLBOCLibrary.git", :commit => "a99db9572f744452b0982d0fe2d99a9a711b6318" }
+  #需要的系统libraries
+  # s.library   = "iconv"
+  # s.libraries = "iconv", "xml2"
 
+  #是否支持Arc
+  s.requires_arc = true
 
-  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
-  #
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
-  spec.source_files  = ["HHLBOCLibrary/*.{h,m}","HHLBOCLibrary/**/*.{h,m}"]
-  #spec.exclude_files = "Classes/Exclude"
+  #依赖库 可以写多个 依赖关系可以指定版本需求
+  # s.dependency "BLNetworking"
+  # s.dependency "BLAPIManagers"
+  # s.dependency "BLMediator"
+  #s.dependency 'HHCocoaTestFrameWork', '1.0.3'
 
-  # spec.public_header_files = "Classes/**/*.h"
-
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
-
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
-    spec.requires_arc = true
-
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  #s.dependency "HHPlayerSDK"
+  
+  # 验证私有库依赖问题
+  # pod lib lint --sources='ttps://github.com/LeAustinHan/HHLBOCLibrary.git,https://github.com/CocoaPods/Specs' --allow-warnings
 
 end
