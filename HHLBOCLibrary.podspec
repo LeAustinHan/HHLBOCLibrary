@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   #需要移除的文件
   # s.exclude_files = "Classes/Exclude"
   #公开的头文件。如果没有指定公共头文件，那么source文件中的所有头文件都被认为是公开的。
-  # s.public_header_files = "Classes/**/*.h"
+  #s.public_header_files = "HHLBOCLibrary/HHLBOCLibrary/HXHBaseHeader.h"
   #私有头文件
   #s.private_header_files = 'Headers/Private/*.h'
 
