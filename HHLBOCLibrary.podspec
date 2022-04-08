@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   # s.social_media_url   = "314456527@qq.com"
 
   #库支持的最低系统版本
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
   #需要系统版本支持平台的最小部署目标。与平台属性不同的是，部署目标属性允许指定多个平台支持该pod，为每个平台指定不同的部署目标。
   # s.ios.deployment_target = "5.0"
