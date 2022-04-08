@@ -5,8 +5,8 @@ Pod::Spec.new do |s|
   #pod的名称
   s.name         = "HHLBOCLibrary"
   #pod的版本
-  s.version      = "0.0.5"
-  #pod简介(最多140字符)
+  s.version      = "0.0.6"
+  #pod简介(最多140字符) 实践01
   s.summary      = "HHLBOCLibrary."
   #pod详细描述
   s.description  = <<-DESC
